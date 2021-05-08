@@ -1,6 +1,6 @@
 class Api::V1::PostsController < ApplicationController
 
-    before_action :find_post #, only: [:update]
+    # before_action :find_post #, only: [:update]
 
 def index
 	@posts = Post.all.order(:created_at)
