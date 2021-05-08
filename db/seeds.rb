@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Contract.create([
+                #  { date: '05/07/2021' },
+                #  { date: '05/08/2021' },
+                #  { date: '05/09/2021' },
+                 { date: '05/10/2021' },
+                 { date: '05/11/2021' }
+                #  ,
+                #  { date: 'Beast Yoga' },
+                #  { date: 'Rehab: Left Ankle' },
+                #  { date: 'Basketball Drills' }
+                 ])
+
+                 
