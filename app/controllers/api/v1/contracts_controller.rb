@@ -1,6 +1,6 @@
 class Api::V1::ContractsController < ApplicationController
 
-    before_action :find_contract #, only: [:update]
+    # before_action :find_contract #, only: [:update]
 
 def index
 	@contracts = Contract.all.order(:created_at)
