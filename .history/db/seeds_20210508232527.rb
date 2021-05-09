@@ -24,16 +24,16 @@ require 'faker'
 
 
 Contract.create([
-                 { date: '10/05/2021' }, #! c1
+                 { date: '10/05/2021' }, #c1
                  { date: '11/05/2021' }, #c2 
                  { date: '12/05/2021' }, #c3 
-                 { date: '13/05/2021' }, #r4
-                 { date: '14/05/2021' } #,
-                #  { date: '15/05/2021' },
-                #  { date: '16/05/2021' },
-                #  { date: '17/05/2021' },
-                #  { date: '18/05/2021' },
-                #  { date: '19/05/2021' }
+                 { date: '13/05/2021' }, #c4
+                 { date: '14/05/2021' },
+                 { date: '15/05/2021' },
+                 { date: '16/05/2021' },
+                 { date: '17/05/2021' },
+                 { date: '18/05/2021' },
+                 { date: '19/05/2021' }
                ])
 
 # Post.create([
@@ -51,28 +51,20 @@ Contract.create([
 #  { date: 'cardio', title: 'floor bridges', distance: '1', duration: '1.5', routines: [{ id: 4, date: 'Rehab: Quads' }] },
 
 c1 = Contract.all[0]
-c1.posts.create(date: '10-05-2021', title: 'stand-up') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
-c1.posts.create(date: '10-05-2021', title: 'sit-down') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
-
-Goal.create(date: '11/05/2021', title: 'build stand-contract rails back-end api', done: 'false')
-
-p1 = Post.all[0]
-# ! create the nested resource below later
- p1.goals.create(date: '10-05-2021', title: 'create 5 commits today') #+, done:'false')
-
-
+c1.posts.create(date: '10-05-2021', title: 'squats') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
+c1.posts.create(date: '10-05-2021', title: 'boogie-board') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
 
 c2 = Contract.all[1]
-c2.posts.create(date: '11-05-2021', title: 'stand-up') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
-c2.posts.create(date: '11-05-2021', title: 'sit-down') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
+c2.posts.create(date: '11-05-2021', title: 'old-soldier-runs') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
+c2.posts.create(date: '11-05-2021', title: 'young-soldier-runs') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
 
 c3 = Contract.all[2]
-c3.posts.create(date: '12-05-2021', title: 'stand-up') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
-c3.posts.create(date: '12-05-2021', title: 'sit-down') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
+c3.posts.create(date: '12-05-2021', title: 'fighter-pilot-swings') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
+c3.posts.create(date: '12-05-2021', title: 'one-legged-squats') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
 
 c4 = Contract.all[3]
-c4.posts.create(date: '13-05-2021', title: 'stand-up') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
-c4.posts.create(date: '13-05-2021', title: 'sit-down') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
+c4.posts.create(date: '13-05-2021', title: 'floor-calf-stretch') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
+c4.posts.create(date: '13-05-2021', title: 'floor-calf-stretch') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
 # r2 = Contract.all[1]
 # r2.posts.create(date: 'Cardio', title: 'floor-clam-shells', distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
 # r2.posts.create(date: 'Cardio', title: 'tke\'s', distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))

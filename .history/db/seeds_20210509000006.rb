@@ -24,16 +24,16 @@ require 'faker'
 
 
 Contract.create([
-                 { date: '10/05/2021' }, #! c1
+                 { date: '10/05/2021' }, #c1
                  { date: '11/05/2021' }, #c2 
                  { date: '12/05/2021' }, #c3 
                  { date: '13/05/2021' }, #r4
-                 { date: '14/05/2021' } #,
-                #  { date: '15/05/2021' },
-                #  { date: '16/05/2021' },
-                #  { date: '17/05/2021' },
-                #  { date: '18/05/2021' },
-                #  { date: '19/05/2021' }
+                 { date: '14/05/2021' },
+                 { date: '15/05/2021' },
+                 { date: '16/05/2021' },
+                 { date: '17/05/2021' },
+                 { date: '18/05/2021' },
+                 { date: '19/05/2021' }
                ])
 
 # Post.create([
@@ -54,12 +54,11 @@ c1 = Contract.all[0]
 c1.posts.create(date: '10-05-2021', title: 'stand-up') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
 c1.posts.create(date: '10-05-2021', title: 'sit-down') #, distance: Faker::Number.between(from: 1, to: 8), duration: Faker::Number.between(from: 1, to: 10))
 
-Goal.create(date: '11/05/2021', title: 'build stand-contract rails back-end api', done: 'false')
-
 p1 = Post.all[0]
 # ! create the nested resource below later
- p1.goals.create(date: '10-05-2021', title: 'create 5 commits today') #+, done:'false')
+#+ p1.goals.create(date: '10-05-2021', title: 'create 5 commits today') #+, done:'false')
 
+Goal.create( { date: '11/05/2021', title: 'build stand-contract rails back-end api'} )
 
 
 c2 = Contract.all[1]
