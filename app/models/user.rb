@@ -8,19 +8,19 @@ class User < ApplicationRecord
 
     has_secure_password
     # validates :username, presence: true
-    validates :username, uniqueness: true
-    validates :username, length: { minimum: 4 }
+    # validates :username, uniqueness: true
+    # validates :username, length: { minimum: 4 }
 
 
 # after_find do |user|
 #     user.password = BCrypt::Password.new(user.password)
 #   end
 
-    def create
-        @user = User.new(params[:user])
-        @user.password = params[:user][:password]
-        @user.save!
-    end
+    # def create
+    #     @user = User.new(params[:user])
+    #     @user.password = params[:user][:password]
+    #     @user.save!
+    # end
 
     # def password
     #     # @password ||= Password.new(password_hash)
@@ -33,3 +33,5 @@ class User < ApplicationRecord
     #     self.password = @password
     # end
 end
+
+
