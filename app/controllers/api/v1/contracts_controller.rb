@@ -37,6 +37,7 @@ else
 private
     def contract_params
       params.require(:contract).permit(:type, :name, :duration, :distance)
+    #   params.require(:contract).permit(:type, :name, :duration, :distance)
     end
 
 		def contract_params
