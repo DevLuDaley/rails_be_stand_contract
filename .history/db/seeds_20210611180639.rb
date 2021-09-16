@@ -21,12 +21,10 @@ require 'faker'
 #                  ])
 
 # post1 = d.posts.create({ date: '05/09/2021' })
-User.create({username:"w", email:"w@w.com", password:"w"})
+ 
+User.create({username: "w", email:  "w@w.com", password_digest:"w"})
 
-User.create({username:"n", email:"n@n.com", password:"n"})
-
-User.create({username:"l", email:"l@l.com", password:"l"})
-
+User.create({username: "n", email:  "n@n.com", password_digest:"n"})
  
 Contract.create([
                  { date: '10/05/2021' }, #! c1

@@ -13,20 +13,15 @@ class ApplicationController < ActionController::Base
       end
 
       def logged_in?
-            # User.all[0]
-            !!session[:user_id]
+            # !!session[:user_id]
+            User.all[0]
             # !!params[:user_id]
       end
 
       def current_user
-            # User.all[0]
             # @current_user ||= User.find(session[:user_id]) 
-            # @current_user ||= User.find(params[:user_id]) 
-            #      @current_user ||=
-            user1 =  {id: 1, username: "w", email: "w@w.com", password_digest: "w" }
-            @current_user ||= user1
-            if session[:user_id]
-            # if params[:user_id]
+            # if session[:user_id]
+                  User.all[0]
             end
       end
       
