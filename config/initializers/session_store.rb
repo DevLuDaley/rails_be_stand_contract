@@ -13,5 +13,4 @@ if Rails.env === 'production'
     # 'http://localhost:3000/api/v1/contracts'
   else
     Rails.application.config.session_store :cookie_store, key: '_rails_be_stand_contract'
-
 end
