@@ -5,7 +5,7 @@ class UsersController < ApplicationController
         # @user = User.find_by(username: session_params[:username])
         # @user = User.create(user_params)
 
-        # binding.pry
+        binding.pry
         @user = User.find_by(username: params[:user][:username])
   
         # if @user && @user.authenticate(session_params[:password])

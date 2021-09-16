@@ -21,8 +21,11 @@ require 'faker'
 #                  ])
 
 # post1 = d.posts.create({ date: '05/09/2021' })
+ 
+User.create({username: "q", email:  "w@w.com", password:"w"})
 
-
+User.create({username: "n", email:  "n@n.com", password_digest:"n"})
+ 
 Contract.create([
                  { date: '10/05/2021' }, #! c1
                  { date: '11/05/2021' }, #c2 
@@ -56,9 +59,9 @@ c1.posts.create(date: '10-05-2021', title: 'sit-down') #, distance: Faker::Numbe
 
 Goal.create(date: '11/05/2021', title: 'build stand-contract rails back-end api', done: 'false')
 
-# p1 = Post.all[0]
+p1 = Post.all[0]
 # ! create the nested resource below later
-#+ p1.goals.create(date: '10-05-2021', title: 'create 5 commits today') #+, done:'false')
+ p1.goals.create(date: '10-05-2021', title: 'create 5 commits today') #+, done:'false')
 
 
 

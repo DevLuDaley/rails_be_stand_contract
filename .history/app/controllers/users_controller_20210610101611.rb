@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         @user = User.find_by(username: params[:user][:username])
   
         # if @user && @user.authenticate(session_params[:password])
-        if @user && @user.authenticate(params[:user][:password])
+        if @user #&& @user.authenticate(params[:user][:password])
           login!
         render json: {
             logged_in: true,
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
                     # User.find([:user_id]) 
         render json: {
             logged_in: true,
-            user: User.all[0]
+            user: current_user
         }
         # else
         # render json: {

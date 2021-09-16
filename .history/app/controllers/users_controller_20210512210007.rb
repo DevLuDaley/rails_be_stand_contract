@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         @user = User.find_by(username: params[:user][:username])
   
         # if @user && @user.authenticate(session_params[:password])
-        if @user && @user.authenticate(params[:user][:password])
+        if @user #&& @user.authenticate(params[:user][:password])
           login!
         render json: {
             logged_in: true,
@@ -24,35 +24,18 @@ class UsersController < ApplicationController
     end
 
     def is_logged_in?
-        # if logged_in? &&
-             current_user = User.all[0]
-            #  User.find_by(     id: 1)
-                    # User.find([:user_id]) 
+        if logged_in? && current_user
         render json: {
             logged_in: true,
-            user: User.all[0]
+            user: current_user
         }
-        # else
-        # render json: {
-        #     logged_in: false,
-        #     message: 'no such user'
-        # }
-        # end
+        else
+        render json: {
+            logged_in: false,
+            message: 'no such user'
+        }
+        end
     end
-
-    # def is_logged_in?
-    #     if logged_in? && current_user
-    #     render json: {
-    #         logged_in: true,
-    #         user: current_user
-    #     }
-    #     else
-    #     render json: {
-    #         logged_in: false,
-    #         message: 'no such user'
-    #     }
-    #     end
-    # end
 
     def destroy
         logout!
