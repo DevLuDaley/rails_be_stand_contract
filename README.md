@@ -1,24 +1,32 @@
-# README
+# rails_be_stand_contract
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rails_be_stand_contract is the backend rails-only api repo supplying data to the Stand Contract app.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
 
-* System dependencies
+1- Fork and clone this repository.
 
-* Configuration
+2- Install dependencies with `bundle install`.
 
-* Database creation
+## Usage
 
-* Database initialization
+1- start up the rails server.
+```terminal
+rails s
+```
 
-* How to run the test suite
+2- visit the below endpoints.
+Endpoints:
+```
+      http://localhost:3000/api/v1/contracts
 
-* Services (job queues, cache servers, search engines, etc.)
+```
 
-* Deployment instructions
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* ...
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
